@@ -24,10 +24,12 @@ connectDB();
 // Import Routes
 const authRoutes = require('./routes/auth');
 const teamRoutes = require('./routes/teams');
+const projectRoutes = require('./routes/projects');
 
 // Routes
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/teams', teamRoutes);
+app.use('/api/v1/projects', projectRoutes);
 
 app.use(errorHandler);
 
