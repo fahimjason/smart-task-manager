@@ -21,6 +21,12 @@ app.use(cookieParser());
 // Connect to database
 connectDB();
 
+// Import Routes
+const authRoutes = require('./routes/auth');
+
+// Routes
+app.use('/api/v1/auth', authRoutes);
+
 app.use(errorHandler);
 
 // Health Check
