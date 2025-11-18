@@ -26,12 +26,14 @@ const authRoutes = require('./routes/auth');
 const teamRoutes = require('./routes/teams');
 const projectRoutes = require('./routes/projects');
 const taskRoutes = require('./routes/tasks');
+const activityRoutes = require('./routes/activity');
 
 // Routes
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/teams', teamRoutes);
 app.use('/api/v1/projects', projectRoutes);
 app.use('/api/v1/tasks', taskRoutes);
+app.use('/api/v1/activity', activityRoutes);
 
 app.use(errorHandler);
 
