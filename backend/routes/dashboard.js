@@ -1,13 +1,22 @@
 const express = require('express');
 const router = express.Router();
 const { protect } = require('../middleware/auth');
-const { stats, memberWorkload } = require('../controllers/dashboard');
+const { summary, stats, overloadMembers, memberWorkload } = require('../controllers/dashboard');
+
+router
+    .route('/summary')
+    .get(protect, summary);
 
 router
     .route('/stats')
     .get(protect, stats);
 
 router
-    .route('/member-workload/:memberId').get(protect, memberWorkload);
+    .route('/overloaded-members')
+    .get(protect, overloadMembers);
+
+router
+    .route('/member-workload/:memberId')
+    .get(protect, memberWorkload);
 
 module.exports = router;
