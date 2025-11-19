@@ -10,7 +10,7 @@ const Activity = require('../models/Activity');
 exports.getTasks = asyncHandler(async (req, res, next) => {
     try {
         const tasks = await Task.find({ userId: req.user._id }).populate('projectId');
-        res.json(tasks);
+        res.json(res.advancedResults);
     } catch (error) {
         return next(new ErrorResponse(error.message, 500));
     }

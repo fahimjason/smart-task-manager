@@ -1,5 +1,7 @@
 const express = require('express');
+const advancedResults = require('../middleware/advancedResults');
 const router = express.Router();
+const Task = require('../models/Task');
 const { protect } = require('../middleware/auth');
 const {
     getTasks,
@@ -13,7 +15,7 @@ const {
 
 router
     .route('/')
-    .get(protect, getTasks);
+    .get(protect, advancedResults(Task, 'projectId'), getTasks);
 
 router
     .route('/')

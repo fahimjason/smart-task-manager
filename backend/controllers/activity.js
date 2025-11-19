@@ -11,7 +11,7 @@ exports.getActivities = asyncHandler(async (req, res, next) => {
             .sort({ createdAt: -1 })
             .limit(10);
             
-        res.json(activities);
+        res.json(res.advancedResults);
     } catch (error) {
         return next(new ErrorResponse(error.message, 500));
     }
