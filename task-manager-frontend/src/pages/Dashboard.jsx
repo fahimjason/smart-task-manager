@@ -2,10 +2,10 @@ import { FolderKanban, CheckSquare, Users } from 'lucide-react';
 import { useDashboard } from '../hooks';
 import { Loader } from '../components/common';
 import {
-    StatCard,
+    StatsCard,
     TaskStatusChart,
     OverloadedMemberCard
-} from '../components/dashboard';
+} from '../components/dashboard/index';
 
 export const Dashboard = () => {
     const { summary, overloaded, loading } = useDashboard();
@@ -21,19 +21,19 @@ export const Dashboard = () => {
 
             {/* Stats Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <StatCard
+                <StatsCard
                     title="Total Projects"
                     value={summary?.projects || 0}
                     icon={FolderKanban}
                     color="blue"
                 />
-                <StatCard
+                <StatsCard
                     title="Total Tasks"
                     value={summary?.tasks?.total || 0}
                     icon={CheckSquare}
                     color="green"
                 />
-                <StatCard
+                <StatsCard
                     title="Total Teams"
                     value={summary?.teams || 0}
                     icon={Users}
