@@ -29,8 +29,7 @@ npm run dev
 
 # The backend will run on: http://localhost:5000
 ```
-Backend API Documentation: [](https://documenter.getpostman.com/view/17345473/2sB3WyHvr7)
-https://documenter.getpostman.com/view/17345473/2sB3WyHvr7
+Backend API Documentation: https://documenter.getpostman.com/view/17345473/2sB3WyHvr7
 
 ---
 
@@ -44,6 +43,8 @@ npm start
 
 # The frontend will run on: http://localhost:3000
 ```
+Visit live Frontend: https://smart-task-manager-fahimjason.netlify.app
+
 ![Login page](/task-manager-frontend/public/login.png)
 
 ![Dashboard](/task-manager-frontend/public/dashboard.png)
